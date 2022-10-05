@@ -1,0 +1,9 @@
+@use '../abstract' as *;
+
+.btn {
+  color: $text-primary;
+  border: none;
+  font-size: $body;
+  padding: 0.5em 0.25em;
+  width: 100%;
+}
