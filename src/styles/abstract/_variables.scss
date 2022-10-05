@@ -1,29 +1,34 @@
-// colors
+/* colors */
 $color-primary: #39cdcc;
 $color-outline: #545f7d26;
 $white: #ffffff;
 $black: #000000;
 
-// text colors
+/* text colors */
 $text-primary: #545f7d;
 $text-secondary: #213f7d;
 
-// event colors
+/* event colors */
 $pending: #e9b200;
 $blacklisted: #e4033b;
 $inactive: #545f7d;
 $active: #39cd62;
 
-// sizes
+/* sizes */
 $logo-height: 2.5rem;
 
-// font sizes
+/* font sizes */
 $body: 2rem;
 $heading: 3.528rem;
 $input-body: 1.1rem;
 
-// box-radius
+/* box-radius */
 $box-radius: 7px 13px 13px 13px;
 
-// box-shadow
+/* box-shadow */
 $box-shadow: 4px 2px 11px 2px rgba(84, 95, 125, 0.65);
+
+/* mobile-first approach */
+/* responsive breakpoints */
+$tablet-up: 40em;
+$desktop: 64em;
