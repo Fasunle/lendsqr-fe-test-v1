@@ -5,8 +5,21 @@
   padding: 1em;
   min-height: 100vh;
 
+  @include desktop{
+    flex-direction: row;
+    max-height: 100vh;
+    padding: 0;
+  }
+
   &__hero {
     @include dflex-column(center);
+    @include desktop {
+      width: 50%;
+      padding: 0 3em;
+      background-color: lighten($color-outline, 45%);
+      height: 100vh;
+      justify-content: center;
+    }
 
     &--logo {
       margin-inline: auto;
@@ -24,6 +37,11 @@
     @include tablet-up {
       width: 80%;
       margin-inline: auto;
+    }
+
+    @include desktop {
+      width: 50%;
+      padding: 0 3em;
     }
 
     .title {
@@ -53,7 +71,7 @@
       padding: 1em;
 
       input {
-        padding: 1em;
+        padding: 0.5em 0.25em;
         height: 3.125rem;
         font-size: $input-body;
       }
@@ -73,7 +91,7 @@
         color: lighten($color-primary, 80%);
         font-size: $body;
         font-weight: 500;
-        height: 5rem;
+        height: 4.5rem;
 
         @include transition-all;
         &:hover {
