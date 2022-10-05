@@ -5,7 +5,7 @@
   padding: 1em;
   min-height: 100vh;
 
-  @include desktop{
+  @include desktop {
     flex-direction: row;
     max-height: 100vh;
     padding: 0;
@@ -24,6 +24,11 @@
     &--logo {
       margin-inline: auto;
       margin-bottom: 1rem;
+      @include desktop {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+      }
     }
   }
 
