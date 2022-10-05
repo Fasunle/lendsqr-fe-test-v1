@@ -16,8 +16,15 @@
 
   &__form {
     flex-grow: 0.8;
-    width: 100%;
     padding-bottom: 1em;
+    width: 100%;
+
+    @include transition-all;
+
+    @include tablet-up {
+      width: 80%;
+      margin-inline: auto;
+    }
 
     .title {
       @include dflex-column;
@@ -62,7 +69,7 @@
       .btn--login {
         background-color: $color-primary;
         /* TODO: the box shadow is too sharp. make it light ir remove totally. */
-        box-shadow: $box-shadow;        
+        box-shadow: $box-shadow;
         color: lighten($color-primary, 80%);
         font-size: $body;
         font-weight: 500;
