@@ -1,0 +1,15 @@
+@use '../abstract' as *;
+
+.input {
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid darken($color-outline, 15%);
+  border-radius: $box-radius;
+  font-size: $input-body;
+
+  &:focus {
+    outline: none;
+    border: 1px solid darken($color-outline, 35%);
+  }
+}
