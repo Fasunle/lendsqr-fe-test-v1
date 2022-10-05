@@ -1,0 +1,109 @@
+@use '../abstract' as *;
+
+.login {
+  @include dflex-column;
+  padding: 1em;
+  min-height: 100vh;
+
+  @include desktop {
+    flex-direction: row;
+    max-height: 100vh;
+    padding: 0;
+  }
+
+  &__hero {
+    @include dflex-column(center);
+    @include desktop {
+      width: 50%;
+      padding: 0 3em;
+      background-color: lighten($color-outline, 45%);
+      height: 100vh;
+      justify-content: center;
+    }
+
+    &--logo {
+      margin-inline: auto;
+      margin-bottom: 1rem;
+      @include desktop {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+      }
+    }
+  }
+
+  &__form {
+    flex-grow: 0.8;
+    padding-bottom: 1em;
+    width: 100%;
+
+    @include transition-all;
+
+    @include tablet-up {
+      width: 80%;
+      margin-inline: auto;
+    }
+
+    @include desktop {
+      width: 50%;
+      padding: 0 3em;
+    }
+
+    .title {
+      @include dflex-column;
+      height: 8rem;
+      margin: 1em 0 1.5em 0;
+      text-align: center;
+
+      h1 {
+        color: $text-secondary;
+        font-size: $heading;
+      }
+
+      h1 + p {
+        font-size: $body;
+        color: $text-primary;
+      }
+    }
+
+    .form {
+      margin-top: 1em;
+      height: 20rem;
+
+      gap: 1rem;
+      @include dflex-column;
+      align-items: stretch;
+      padding: 1em;
+
+      input {
+        padding: 0.5em 1em;
+        height: 3.125rem;
+        font-size: $input-body;
+      }
+
+      .btn--forgot-password {
+        background-color: transparent;
+        color: $color-primary;
+        font-size: $body;
+        width: max-content;
+        text-align: left;
+      }
+
+      .btn--login {
+        background-color: $color-primary;
+        /* TODO: the box shadow is too sharp. make it light ir remove totally. */
+        box-shadow: $box-shadow;
+        color: lighten($color-primary, 80%);
+        font-size: $body;
+        font-weight: 500;
+        height: 4.5rem;
+
+        @include transition-all;
+        &:hover {
+          background-color: darken($color-primary, 4%);
+          color: lighten($color-primary, 90%);
+        }
+      }
+    }
+  }
+}

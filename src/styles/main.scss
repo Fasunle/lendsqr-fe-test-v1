@@ -1,3 +1,5 @@
 @use './abstract' as a;
 @use './layout/header';
+@use './pages/login';
 @use './pages/home';
+@use './components' as *;
