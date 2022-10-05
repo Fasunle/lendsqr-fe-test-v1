@@ -1,18 +1,25 @@
-# Getting Started with Create React App
+# Introduction to Lendsqr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Empowering the smartest lenders.
 
-## Available Scripts
+## Lend with ease
 
-In the project directory, you can run:
+Automate your entire credit lifecycle with Lendsqr’s comprehensive end-to-end digital lending stack. Manage and optimize your lending process using our extensively configurable loan decisioning workflow and easily adapt your offerings for your best customers.
+
+## We’re powering the smartest lenders
+
+We provide our lenders from various industries with a cloud lending platform to make the activities of your LaaS business run smoothly by implementing novel solutions and superior domain expertise. We’re passionate about making lenders succeed.
+
+## Start Project
+
+You can follow the guide below to start a development server.
+
+It is assumed that you have latest [nodejs](https://nodejs.org/en/) (version 18.10.0) installed on your machine.
 
 ### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
@@ -27,20 +34,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Prerequisite
 
-### `yarn eject`
+- Nodejs version ^18.10.0
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Deployed version
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Visit the deployed version at [Kehinde Fasunle](https://lendsqr-fe-test-fasunle.vercel.app/)
