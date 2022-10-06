@@ -1,0 +1,8 @@
+@use '../abstract' as *;
+
+// html root element
+* {
+  font-size: map-get(map-get($font-sizes, 'lg'), 'font-size');
+  line-height: map-get(map-get($font-sizes, 'lg'), 'line-height');
+  color: lighten($black, 60%);
+}
