@@ -42,7 +42,7 @@
     @include transition-all;
 
     @include tablet-up {
-      width: 80%;
+      width: clamp(calc(100vw - 30%), 60%, 100vw);
       margin-inline: auto;
     }
 
@@ -54,9 +54,11 @@
 
     .title {
       @include dflex-column;
-      height: 8rem;
-      margin: 1em 0 1.5em 0;
       text-align: center;
+      margin-bottom: 1em;
+      @include desktop {
+        margin-bottom: 4em;
+      }
 
       h1 {
         color: $text-secondary;
