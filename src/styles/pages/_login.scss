@@ -74,9 +74,13 @@
       align-items: stretch;
       gap: 1rem;
 
-      input {
+      .input {
         padding: 0.5em 1em;
         height: 3.125rem;
+
+        &:focus {
+          background-color: darken($white, 1%);
+        }
       }
 
       .passwordContainer {
