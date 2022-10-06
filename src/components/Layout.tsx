@@ -1,5 +1,5 @@
 import { Content } from './content';
-import { NavBar } from './nav';
+import { NavBar } from './header';
 import { Panel } from './panel';
 
 const Layout = () => {
