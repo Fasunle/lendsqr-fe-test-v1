@@ -1,5 +1,5 @@
 const Panel = () => {
-  return <aside className='panel'>Panel Component</aside>;
+  return <aside className='panel'>Panel</aside>;
 };
 
 export default Panel;

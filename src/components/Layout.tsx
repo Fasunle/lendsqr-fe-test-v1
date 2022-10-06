@@ -1,13 +1,15 @@
 import { Content } from './content';
-import { NavBar } from './header';
+import { Header } from './header';
 import { Panel } from './panel';
 
 const Layout = () => {
   return (
     <div className='layout'>
-      <NavBar />
-      <Panel />
-      <Content />
+      <Header />
+      <section className='section'>
+        <Panel />
+        <Content />
+      </section>
     </div>
   );
 };
