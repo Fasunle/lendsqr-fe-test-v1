@@ -79,6 +79,30 @@
         height: 3.125rem;
       }
 
+      .passwordContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .btn {
+          display: none;
+          position: absolute;
+          right: 0;
+
+          background-color: transparent;
+          color: $color-primary;
+          font-weight: 500;
+          margin: 0.2em;
+          max-width: fit-content;
+
+          @include tablet-up {
+            padding: 0.3em 1em;
+            margin-right: 0.5em;
+            display: flex;
+          }
+        }
+      }
+
       .btn--forgot-password {
         background-color: transparent;
         color: $color-primary;
@@ -89,7 +113,7 @@
 
       .btn--login {
         background-color: $color-primary;
-        border-radius: 3px;
+        border-radius: 8px;
         color: lighten($color-primary, 70%);
         font-weight: 500;
         height: 3rem;
