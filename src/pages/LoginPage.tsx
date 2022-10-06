@@ -3,7 +3,7 @@ import logo from '../assets/lendsqr-logo.svg';
 import hero from '../assets/pablo-sign-in.svg';
 
 const LoginPage = () => {
-  const [ showPassword, setShopPassword ] = useState( false );
+  const [showPassword, setShopPassword] = useState(false);
 
   return (
     <div className='container login'>
@@ -25,17 +25,21 @@ const LoginPage = () => {
         </div>
         <div className='form'>
           <div>
-            <input className='input' type='text' placeholder='Email' />
+            <input className='input' type='email' placeholder='Email' />
           </div>
 
           <div className='passwordContainer'>
-            <input className='input' type={showPassword ? 'text' : 'password'} placeholder='Password' />
+            <input
+              className='input'
+              type={showPassword ? 'text' : 'password'}
+              placeholder='Password'
+            />
             {showPassword ? (
-              <button className='btn text-xl' onClick={() => setShopPassword( !showPassword )}>
+              <button className='btn text-xl' onClick={() => setShopPassword(!showPassword)}>
                 Show
               </button>
             ) : (
-              <button className='btn' onClick={() => setShopPassword( !showPassword )}>
+              <button className='btn' onClick={() => setShopPassword(!showPassword)}>
                 Hide
               </button>
             )}
