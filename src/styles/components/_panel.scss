@@ -1,0 +1,11 @@
+@use '../abstract' as *;
+
+.panel {
+  width: 15rem;
+  position: absolute;
+  top: 7.5rem;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  padding-inline: 1em;
+}
