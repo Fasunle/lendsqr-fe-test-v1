@@ -1,10 +1,9 @@
 @use './variables' as *;
 
 // generate utility classes
-@each $device,
-$font in $font-sizes {
-    .text-#{$device} {
-        font-size: map-get($font, 'font-size');
-        line-height: map-get($font, 'line-height');
-    }
+@each $device, $font in $font-sizes {
+  .text-#{$device} {
+    font-size: map-get($font, 'font-size');
+    line-height: map-get($font, 'line-height');
+  }
 }
