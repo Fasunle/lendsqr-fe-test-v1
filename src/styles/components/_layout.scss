@@ -1,0 +1,9 @@
+@use '../abstract' as *;
+
+.layout {
+  > .section {
+    margin-top: 7.5rem;
+    display: inline-flex;
+    background-color: $content-bg;
+  }
+}
