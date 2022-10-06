@@ -1,15 +1,19 @@
 @use '../abstract' as *;
 
 .input {
-  width: 100%;
-  padding: 1em;
-  outline: none;
   border: 1px solid darken($color-outline, 15%);
-  border-radius: $box-radius;
-  font-size: $input-body;
+  border-radius: 3px;
+  color: lighten($black, 50%);
+  outline: none;
+  padding: 1em;
+  width: 100%;
 
   &:focus {
-    outline: none;
     border: 1px solid darken($color-outline, 35%);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: lighten($black, 60%);
   }
 }
