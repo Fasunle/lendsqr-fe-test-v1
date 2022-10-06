@@ -5,8 +5,8 @@ import Layout from './components/Layout';
 const App = () => {
   return (
     <Routes>
-      <Route element={<Layout />} path='/dashboard' />
-      <Route path='/' element={<LoginPage />} />
+      <Route element={<Layout />} path='/' />
+      <Route path='/login' element={<LoginPage />} />
     </Routes>
   );
 };

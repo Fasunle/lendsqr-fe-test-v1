@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import logo from '../assets/lendsqr-logo.svg';
 import hero from '../assets/pablo-sign-in.svg';
 
 const LoginPage = () => {
+  const [showPassword, setShopPassword] = useState(false);
+
   return (
     <div className='container login'>
       <section className='login__hero'>
@@ -17,22 +20,35 @@ const LoginPage = () => {
       {/* form component */}
       <section className='login__form'>
         <div className='title'>
-          <h1>Welcome!</h1>
-          <p>Enter details to login</p>
+          <h1 className='text-6xl'>Welcome!</h1>
+          <p className='text-xl'>Enter details to login</p>
         </div>
         <div className='form'>
-          <div className='inputContainer'>
-            <input className='input' type='text' placeholder='Email' />
+          <div>
+            <input className='input' type='email' placeholder='Email' />
           </div>
 
-          <div className='inputContainer'>
-            <input className='input' type='text' placeholder='Password' />
+          <div className='passwordContainer'>
+            <input
+              className='input'
+              type={showPassword ? 'text' : 'password'}
+              placeholder='Password'
+            />
+            {showPassword ? (
+              <button className='btn text-xl' onClick={() => setShopPassword(!showPassword)}>
+                Show
+              </button>
+            ) : (
+              <button className='btn' onClick={() => setShopPassword(!showPassword)}>
+                Hide
+              </button>
+            )}
           </div>
           <div>
-            <button className='btn btn--forgot-password'>Forgot Password?</button>
+            <button className='btn btn--forgot-password text-xl'>Forgot Password?</button>
           </div>
           <div>
-            <button className='btn btn--login'>Log In</button>
+            <button className='btn btn--login text-3xl'>Log In</button>
           </div>
         </div>
       </section>
