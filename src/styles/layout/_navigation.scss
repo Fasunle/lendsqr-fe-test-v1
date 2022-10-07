@@ -1,0 +1,21 @@
+@use '../abstract' as *;
+
+.layout {
+  display: inline-flex;
+  background-color: $content-bg;
+
+  .content {
+    position: absolute;
+    right: 3.75rem;
+    left: 18.75rem;
+    bottom: 0;
+    top: 7.5rem;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 6.25rem;
+    left: 0;
+    bottom: 0;
+  }
+}
