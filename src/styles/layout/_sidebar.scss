@@ -3,7 +3,7 @@
 .sidebar {
   width: 17.5rem;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   overflow: hidden scroll;
 
   &::-webkit-scrollbar {
@@ -50,11 +50,11 @@
   }
   .logout--icon {
     background-color: transparent;
+    color: $text-secondary;
     display: block;
     width: fit-content;
     position: relative;
-    top: 1.3em;
+    top: 1em;
     left: 4em;
-    color: $text-secondary;
   }
 }
