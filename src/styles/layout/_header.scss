@@ -11,11 +11,6 @@
   top: 0;
   z-index: 999;
 
-  // change default color
-  * {
-    color: $text-secondary;
-  }
-
   &__logo {
     @include dflex;
     min-width: 12rem;
