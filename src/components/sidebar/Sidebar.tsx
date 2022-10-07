@@ -13,7 +13,6 @@ import organisationsIcon from '../../assets/icons/briefcase 1.svg';
 import savingsProductsIcon from '../../assets/icons/Group.svg';
 import coinsIcon from '../../assets/icons/coins-solid 1.svg';
 import servicesIcon from '../../assets/icons/galaxy 1.svg';
-import serviceAccountsIcon from '../../assets/icons/user-cog 1.svg';
 import settlementsIcon from '../../assets/icons/scroll 1.svg';
 import transactionsIcon from '../../assets/icons/transactions.svg';
 import reportsIcon from '../../assets/icons/chart-bar 2.svg';
