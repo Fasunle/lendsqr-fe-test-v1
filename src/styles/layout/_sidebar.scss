@@ -48,4 +48,13 @@
       aspect-ratio: 1;
     }
   }
+  .logout--icon {
+    background-color: transparent;
+    display: block;
+    width: fit-content;
+    position: relative;
+    top: 1.3em;
+    left: 4em;
+    color: $text-secondary;
+  }
 }
