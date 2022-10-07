@@ -35,4 +35,17 @@
       }
     }
   }
+
+  .btn--logout {
+    background-color: transparent;
+    display: block;
+    margin: 1em 0;
+    margin-left: 1.5125rem;
+    padding: 0.5em;
+    width: fit-content;
+    > img {
+      height: 1rem;
+      aspect-ratio: 1;
+    }
+  }
 }
