@@ -21,6 +21,7 @@
       cursor: pointer;
       padding-left: 1.3125em;
       position: relative;
+      @include transition-all;
 
       &::before {
         content: '';
