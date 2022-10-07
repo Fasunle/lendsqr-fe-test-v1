@@ -1,0 +1,30 @@
+@use '../abstract' as *;
+
+.links {
+  @include dflex-column;
+  align-items: flex-start;
+
+  &__header--title {
+    text-transform: uppercase;
+    margin: 0.2em 2em;
+  }
+
+  &__body {
+    padding: 0;
+    margin: 0;
+
+    &--item {
+      @include dflex;
+      .text {
+        text-transform: capitalize;
+        margin: 0;
+      }
+    }
+  }
+
+  .icon {
+    aspect-ratio: 1;
+    margin-inline: 0.5em;
+    width: 1rem;
+  }
+}
