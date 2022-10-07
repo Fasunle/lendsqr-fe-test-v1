@@ -5,4 +5,6 @@
   font-size: map-get(map-get($font-sizes, 'base'), 'font-size');
   line-height: map-get(map-get($font-sizes, 'base'), 'line-height');
   color: $text-secondary;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
 }
