@@ -1,9 +1,21 @@
 @use '../abstract' as *;
 
 .layout {
-  > .section {
-    margin-top: 7.5rem;
-    display: inline-flex;
-    background-color: $content-bg;
+  display: inline-flex;
+  background-color: $content-bg;
+
+  .content {
+    position: absolute;
+    right: 3.75rem;
+    left: 18.75rem;
+    bottom: 0;
+    top: 7.5rem;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+    bottom: 0;
   }
 }
