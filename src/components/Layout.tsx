@@ -1,13 +1,13 @@
 import { Content } from './content';
 import { Header } from './header';
-import { Panel } from './panel';
+import { Sidebar } from './sidebar';
 
 const Layout = () => {
   return (
     <div className='layout'>
       <Header />
       <section className='section'>
-        <Panel />
+        <Sidebar />
         <Content />
       </section>
     </div>

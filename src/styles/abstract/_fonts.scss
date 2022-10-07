@@ -1,5 +1,8 @@
 @use './variables' as *;
 
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+
 // generate utility classes
 @each $device, $font in $font-sizes {
   .text-#{$device} {
