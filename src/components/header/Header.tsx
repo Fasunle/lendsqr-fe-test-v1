@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <div className='header__search'>
         <input
-          className='header__search--search-box input'
+          className='header__search--search-box'
           type='text'
           placeholder='search for anything'
           aria-label='search box'
