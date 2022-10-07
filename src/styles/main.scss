@@ -1,6 +1,6 @@
 @use './abstract' as a;
 @use './base' as *;
-@use './layout/header';
+@use './layout' as *;
 @use './pages/login';
 @use './pages/home';
 @use './components' as *;
