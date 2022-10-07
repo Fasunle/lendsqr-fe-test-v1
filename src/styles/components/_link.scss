@@ -14,10 +14,30 @@
   &__body {
     padding: 0;
     margin: 0;
+    width: 100%;
 
     &--item {
       @include dflex;
+      cursor: pointer;
       padding-left: 1.3125em;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 100%;
+        width: 3px;
+        position: absolute;
+        left: 0;
+      }
+
+      &:hover {
+        background-color: lighten($color-primary, 45%);
+      }
+
+      &:hover::before {
+        background-color: $color-primary;
+      }
+
       .text {
         text-transform: capitalize;
         margin: 0;
