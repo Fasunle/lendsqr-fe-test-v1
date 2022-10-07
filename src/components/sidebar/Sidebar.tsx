@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+// relative imports
 import List from '../common/List';
 import ListItem from '../common/ListItem';
 // icons
@@ -19,7 +21,7 @@ import reportsIcon from '../../assets/icons/chart-bar 2.svg';
 import preferencesIcon from '../../assets/icons/sliders-h 1.svg';
 import pricingIcon from '../../assets/icons/badge-percent 1.svg';
 import auditIcon from '../../assets/icons/clipboard-list 1.svg';
-import logoutIcon from '../../assets/icons/arrow-right.svg';
+import logoutIcon from '../../assets/icons/sign-out 1.svg';
 import dashboardIcon from '../../assets/icons/home-icon.svg';
 import dropdownIcon from '../../assets/icons/dropdown-arrow.svg';
 
@@ -66,10 +68,6 @@ export const CustomSettings = () => (
     <ListItem leftIcon={preferencesIcon} title='Preferences' />
     <ListItem leftIcon={pricingIcon} title='Fees and Pricing' />
     <ListItem leftIcon={auditIcon} title='Audit Logs' />
-    <ListItem leftIcon={systemMessages} title='System Messages' />
-    <button className='logout'>
-      <img src={logoutIcon} alt='user logout' />
-    </button>
   </List>
 );
 
@@ -88,6 +86,7 @@ const SidebarHeader = () => (
 );
 
 const SideBar = () => {
+  const { pathname } = useLocation();
   return (
     <aside className='sidebar'>
       <SidebarHeader />
@@ -95,6 +94,18 @@ const SideBar = () => {
       <Bussinesses />
       <ServiceAccounts />
       <Settings />
+
+      {pathname != '/' && <ListItem leftIcon={systemMessages} title='System Messages' />}
+
+      <button className='btn btn--logout'>
+        <img src={logoutIcon} alt='logout' />
+      </button>
+
+      <div className='divider-container'>
+        <div className='divider'></div>
+      </div>
+
+      <button className='btn logout--icon text-base'>Logout</button>
     </aside>
   );
 };
