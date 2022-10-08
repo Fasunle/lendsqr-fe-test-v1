@@ -1,21 +1,26 @@
 @use '../abstract' as *;
 
-.layout {
+.content {
   display: inline-flex;
   background-color: $content-bg;
+}
 
-  .content {
-    position: absolute;
-    right: 0;
-    left: 18rem;
-    bottom: 0;
-    top: 7.5rem;
-  }
+.sidebar {
+  position: absolute;
+  top: 6.25rem;
+  left: 0;
+  bottom: 0;
+}
 
-  .sidebar {
-    position: absolute;
-    top: 6.25rem;
-    left: 0;
-    bottom: 0;
+.page {
+  position: absolute;
+  right: 0;
+  left: 18rem;
+  bottom: 0;
+  top: 7.5rem;
+
+  .page-title {
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem 6rem;
   }
 }
