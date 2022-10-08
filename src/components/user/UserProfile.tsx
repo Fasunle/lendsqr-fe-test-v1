@@ -1,3 +1,4 @@
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import avatarLogo from '../../assets/icons/avatar.svg';
 import { Stars } from './Stars';
 
@@ -22,6 +23,8 @@ export const UserProfile = ({
   tier,
   userId,
 }: UserProfilePropTypes) => {
+  const { pathname } = useLocation();
+
   return (
     <section className='profile'>
       <div className='profile--user'>
@@ -57,12 +60,24 @@ export const UserProfile = ({
       </div>
       <nav className='profile--nav'>
         <ul className='nav-list'>
-          <li className='nav-item'>General Details</li>
-          <li className='nav-item'>Documents</li>
-          <li className='nav-item'>Bank Details</li>
-          <li className='nav-item'>Loans</li>
-          <li className='nav-item'>Savings</li>
-          <li className='nav-item'>App and System</li>
+          <li className='nav-item text-lg'>
+            <RouterLink to={pathname}>General Details</RouterLink>
+          </li>
+          <li className='nav-item text-lg'>
+            <RouterLink to='#/documents'>Documents</RouterLink>
+          </li>
+          <li className='nav-item text-lg'>
+            <RouterLink to='#/documents'>Bank Details</RouterLink>
+          </li>
+          <li className='nav-item text-lg'>
+            <RouterLink to='#/loans'>Loans</RouterLink>
+          </li>
+          <li className='nav-item text-lg'>
+            <RouterLink to='#/savings'>Savings</RouterLink>
+          </li>
+          <li className='nav-item text-lg'>
+            <RouterLink to='#/app-and-system'>App and System</RouterLink>
+          </li>
         </ul>
       </nav>
     </section>
