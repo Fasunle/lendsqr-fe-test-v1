@@ -18,6 +18,11 @@
   left: 18rem;
   bottom: 0;
   top: 7.5rem;
+  overflow: hidden scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .page-title {
     font-weight: 600;
