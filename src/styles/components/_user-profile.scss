@@ -6,7 +6,9 @@
   &--nav > .nav-list {
     @include dflex;
   }
-
+    // box-shadow is cool
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    
   &--user {
     > *:not(.divider) {
       width: 8rem;
