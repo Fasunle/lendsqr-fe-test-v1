@@ -7,7 +7,7 @@ import usersWithSavings from '../../assets/icons/users-with-savings.svg';
 const Content = () => {
   return (
     <main className='content'>
-      <h1 className='content__header'>User</h1>
+      <h1 className='content__header text-2xl'>User</h1>
       <section className='content__analytics'>
         <div className='cards'>
           <Card imgUrl={usersImage} status='users' numberOfUsers={234546} />
