@@ -1,1 +1,18 @@
 @use '../abstract' as *;
+
+.content {
+  &__header {
+    font-weight: 600;
+  }
+
+  &__analytics {
+    > .cards {
+      display: grid;
+      grid-template-columns: 7em repeat(4, 1fr) 7em;
+
+      .card:first-child {
+        grid-column: 2 / 3;
+      }
+    }
+  }
+}
