@@ -1,11 +1,10 @@
 import fullStarIcon from '../../assets/icons/full-star.svg';
 import emptyStarIcon from '../../assets/icons/empty-star.svg';
-import { ReactPropTypes } from 'react';
 
 type StarType = {
   rating: number;
 };
-
+/* eslint-disable */
 export const Stars = ({ rating: number }: StarType) => {
   // handle the logic here
   return (
