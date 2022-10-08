@@ -1,0 +1,25 @@
+@use '../abstract' as *;
+
+.user {
+    .user-page-title {
+    // override page title style
+    margin: 0.5rem 0 0.5rem 4rem;
+    
+    @include dflex;
+    align-items: center;
+
+    .title {
+      margin-left: 3rem;
+    }
+
+    .leftArrorContainer {
+      transform: translateX(1.5em);
+      @include transition-all;
+      transition-timing-function: ease-in;
+
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+  }
+}
