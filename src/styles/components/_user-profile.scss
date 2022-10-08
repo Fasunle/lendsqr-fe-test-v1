@@ -2,8 +2,9 @@
 
 .profile {
   margin-inline: 4em;
+  height: 13.125rem;
   &--user,
-  &--nav {
+  &--nav > .nav-list {
     @include dflex;
   }
 
@@ -42,6 +43,15 @@
 
     h2 {
       font-weight: 500;
+    }
+  }
+
+  &--nav {
+    .nav-list {
+      list-style-type: none;
+      justify-content: space-evenly; // it is a flex item. Check line 7 above
+      margin: 0;
+      padding: 0;
     }
   }
 }
