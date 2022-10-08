@@ -6,7 +6,7 @@ type StarType = {
   rating: number;
 };
 
-export const Stars = ( { rating: number }: StarType ) => {
+export const Stars = ({ rating: number }: StarType) => {
   // handle the logic here
   return (
     <span className='stars'>
