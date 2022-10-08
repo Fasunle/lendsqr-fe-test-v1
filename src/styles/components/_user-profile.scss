@@ -2,13 +2,23 @@
 
 .profile {
   margin-inline: 4em;
-  height: 13.125rem;
   &--user,
   &--nav > .nav-list {
     @include dflex;
   }
+  // box-shadow is cool
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 
   &--user {
+    .imgContainer {
+      padding-left: 0.5em;
+      aspect-ratio: 1;
+      height: 6.25rem;
+      img {
+        border-radius: 50%;
+      }
+    }
+
     > *:not(.divider) {
       width: 8rem;
     }
