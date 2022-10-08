@@ -3,7 +3,8 @@
 .user {
   .user-page-title {
     // override page title style
-    margin: 0.5rem 0 0.5rem 4rem;
+    margin: 1rem 0 2rem -3rem;
+    text-decoration: none;
 
     @include dflex;
     align-items: center;
