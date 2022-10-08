@@ -2,7 +2,6 @@
 
 .profile {
   margin-inline: 4em;
-  height: 13.125rem;
   &--user,
   &--nav > .nav-list {
     @include dflex;
