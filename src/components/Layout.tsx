@@ -1,16 +1,18 @@
-import { Content } from './content';
+import { Fragment, ReactNode } from 'react';
 import { Header } from './header';
 import { Sidebar } from './sidebar';
 
-const Layout = () => {
+type LayoutPropTypes = {
+  children?: ReactNode;
+};
+
+const Layout = ({ children }: LayoutPropTypes) => {
   return (
-    <div className='layout'>
+    <Fragment>
       <Header />
-      <section className='section'>
-        <Sidebar />
-        <Content />
-      </section>
-    </div>
+      <Sidebar />
+      <main className='content'>{children}</main>
+    </Fragment>
   );
 };
 

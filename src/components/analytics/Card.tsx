@@ -1,5 +1,5 @@
 type CartPropType = {
-  numberOfUsers: number;
+  numberOfUsers: string;
   alt?: string;
   imgUrl: string;
   status: string;

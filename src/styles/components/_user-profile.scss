@@ -1,0 +1,82 @@
+@use '../abstract' as *;
+
+.profile {
+  margin-inline: 4em;
+  height: 13.125rem;
+  &--user,
+  &--nav > .nav-list {
+    @include dflex;
+  }
+
+  &--user {
+    > *:not(.divider) {
+      width: 8rem;
+    }
+
+    .dividerContainer {
+      padding: 1em 0;
+      height: 100%;
+      width: fit-content;
+    }
+    .divider {
+      width: 2px;
+      height: 6.25rem;
+      transform: rotateY(9deg);
+      margin-inline: 1em;
+    }
+
+    .username {
+      flex-grow: 0.2;
+      > h1 {
+        font-weight: 700;
+        color: darken($text-secondary, 20%);
+      }
+    }
+
+    .account-info {
+      flex-grow: 0.2;
+    }
+
+    p {
+      margin-top: 0.5em;
+    }
+
+    h2 {
+      font-weight: 500;
+    }
+  }
+
+  &--nav {
+    .nav-list {
+      list-style-type: none;
+      justify-content: space-evenly; // it is a flex item. Check line 7 above
+      margin: 0;
+      padding: 0;
+
+      .nav-item {
+        a {
+          text-decoration: none;
+        }
+
+        position: relative;
+        @include transition-all;
+        transition-timing-function: cubic-bezier(0.76, 0.34, 0.1, 0.81);
+        transition-duration: 300ms;
+
+        a::after {
+          content: '';
+          height: 4px;
+          width: 120%;
+          position: absolute;
+          left: -0.5725rem;
+          right: -0.5325rem;
+          bottom: -4px;
+        }
+
+        a:hover::after {
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}
