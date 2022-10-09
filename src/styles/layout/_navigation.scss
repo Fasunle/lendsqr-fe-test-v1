@@ -1,10 +1,8 @@
 @use '../abstract' as *;
 
-.content {
-  display: inline-flex;
-  background-color: $content-bg;
+body {
+  background-color: darken($white, 0.7%);
 }
-
 .sidebar {
   position: absolute;
   top: 6.25rem;
