@@ -39,7 +39,7 @@ const LoginPage = () => {
                 Show
               </button>
             ) : (
-                <button className='btn text-xl' onClick={() => setShopPassword(!showPassword)}>
+              <button className='btn text-xl' onClick={() => setShopPassword(!showPassword)}>
                 Hide
               </button>
             )}
