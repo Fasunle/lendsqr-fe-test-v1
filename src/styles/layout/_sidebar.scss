@@ -5,6 +5,7 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   padding-bottom: 1em;
   overflow: hidden scroll;
+  background-color: $white;
 
   &::-webkit-scrollbar {
     display: none;
