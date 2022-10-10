@@ -40,4 +40,6 @@ Your app is ready to be deployed!
 
 ## Deployed version
 
+> set `REACT_APP_API_BASEURL` to the API endpoint before deploying the application.
+
 Visit the deployed version at [Kehinde Fasunle](https://lendsqr-fe-test-fasunle.vercel.app/)

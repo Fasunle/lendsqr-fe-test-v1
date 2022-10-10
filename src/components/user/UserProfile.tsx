@@ -4,12 +4,14 @@ import { Stars } from './Stars';
 
 type UserProfilePropTypes = {
   avatar?: string;
-  fullname: string;
+  firstname: string;
+  lastname: string;
   tier: string;
   stars: number;
-  userId: string;
+  username: string;
   balance: string;
-  accountNumber: number;
+  accountNumber: string;
+  currency: string;
   bankName: string;
 };
 
@@ -17,11 +19,13 @@ export const UserProfile = ({
   accountNumber,
   balance,
   bankName,
-  fullname,
+  currency,
+  lastname,
+  firstname,
   avatar,
   stars,
   tier,
-  userId,
+  username,
 }: UserProfilePropTypes) => {
   const { pathname } = useLocation();
 
@@ -29,11 +33,16 @@ export const UserProfile = ({
     <section className='profile'>
       <div className='profile--user'>
         <div className='imgContainer'>
-          <img className='profile-picture' src={avatar || avatarLogo} alt={fullname} />
+          <img
+            className='profile-picture'
+            src={avatar || avatarLogo}
+            alt={`${lastname} ${firstname}`}
+          />
         </div>
         <div className='identity'>
-          <h1 className='username text-xl'>{fullname}</h1>
-          <p className='user-id'>{userId}</p>
+          <h1 className='lastname text-xl'>{lastname}</h1>
+          <h2 className='fristname text-lg'>{firstname}</h2>
+          <p className='user-id'>{username}</p>
         </div>
         {/* vertical separator */}
         <div className='dividerContainer'>
@@ -52,7 +61,9 @@ export const UserProfile = ({
         </div>
 
         <div className='account-info'>
-          <h2 className='balance text-lg'>{balance}</h2>
+          <h2 className='balance text-lg'>
+            {currency} {balance}
+          </h2>
           <p className='bank-info'>
             {accountNumber}/ {bankName}
           </p>
