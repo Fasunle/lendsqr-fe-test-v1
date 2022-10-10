@@ -1,14 +1,23 @@
 @use '../abstract' as *;
 
 .profile {
-  margin-inline: 4em;
-  height: 13.125rem;
   &--user,
   &--nav > .nav-list {
     @include dflex;
   }
+  // box-shadow is cool
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 
   &--user {
+    .imgContainer {
+      padding-left: 0.5em;
+      aspect-ratio: 1;
+      height: 6.25rem;
+      img {
+        border-radius: 50%;
+      }
+    }
+
     > *:not(.divider) {
       width: 8rem;
     }
@@ -78,5 +87,49 @@
         }
       }
     }
+  }
+}
+
+.general-information {
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  margin: 2em 0 0;
+  padding: 1em;
+  padding-bottom: 3em;
+
+  .dividerContainer {
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  h2 {
+    margin: 0.5em 0;
+    font-weight: 700;
+  }
+
+  // detail category
+  .details {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+
+    .info {
+      padding: 0.5em;
+
+      .kind {
+        font-size: 400;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+        color: $text-primary;
+      }
+
+      .description {
+        font-size: 700;
+        text-align: center;
+      }
+    }
+  }
+
+  .header {
+    margin: 2em 4em 0;
   }
 }
