@@ -36,6 +36,7 @@ interface Education {
 export interface User {
   id: string;
   accountBalance: string;
+  accountNumber: string;
   createdAt: string;
   orgName: string;
   userName: string;

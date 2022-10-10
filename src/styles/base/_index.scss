@@ -14,3 +14,11 @@
   opacity: 0.3;
   background-color: $border-color;
 }
+
+.loading {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 30px;
+  color: $color-primary;
+  text-align: center;
+}
