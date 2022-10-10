@@ -1,3 +1,5 @@
+import type { User as UserDataType } from '../../app/types';
+
 type InformationType = {
   kind: string;
   description: string;
@@ -10,23 +12,24 @@ const Information = ({ description, kind }: InformationType) => (
   </div>
 );
 
-export const GeneralInformation = () => {
+export const GeneralInformation = ({ ...data }: UserDataType) => {
   return (
     <div className='general-information'>
       {/* personal */}
       <div className='personal'>
         <h2 className='title text-2xl'>Personal Information</h2>
         <div className='details'>
-          <Information kind='Full Name' description='Grace Effiom' />
-          <Information kind='Phone Number' description='07060780922' />
-          <Information kind='Email Address' description='grace@gmail.com' />
-          <Information kind='Bvn' description='07060780922' />
-          <Information kind='Gender' description='Female' />
+          <Information
+            kind='Full Name'
+            description={`${data.profile.lastName} ${data.profile.firstName}`}
+          />
+          <Information kind='Phone Number' description={data.phoneNumber} />
+          <Information kind='Email Address' description={data.email} />
+          <Information kind='Bvn' description={data.profile.bvn} />
+          <Information kind='Gender' description={data.profile.gender} />
           <Information kind='Marital status' description='Single' />
           <Information kind='Children' description='None' />
           <Information kind='Type of residence' description="Parent's Apartment" />
-          <Information kind='' description='' />
-          <Information kind='' description='' />
         </div>
       </div>
       <div className='dividerContainer'>
@@ -36,14 +39,19 @@ export const GeneralInformation = () => {
       <div className='employment-and-education text-lg'>
         <h2 className='title text-2xl'>Education and Employment</h2>
         <div className='details'>
-          <Information kind='level of education' description='B.Sc' />
-          <Information kind='Employment Status' description='Employed' />
-          <Information kind='sector of employment' description='FinTech' />
-          <Information kind='office email' description='' />
-          <Information kind='Duration of employment' description='2 years' />
-          <Information kind='office email' description='grace@lendsqr.com' />
-          <Information kind='Monthly income' description='₦200,000.00- ₦400,000.00' />
-          <Information kind='loan repayment' description='40,000' />
+          <Information kind='level of education' description={data.education.level} />
+          <Information kind='Employment Status' description={data.education.employmentStatus} />
+          <Information kind='sector of employment' description={data.education.sector} />
+          <Information kind='office email' description={data.education.officeEmail} />
+          <Information kind='Duration of employment' description={data.education.duration} />
+          <Information
+            kind='Monthly income'
+            description={`${data.profile.currency} ${data.education.monthlyIncome[0]} - ${data.profile.currency} ${data.education.monthlyIncome[1]}`}
+          />
+          <Information
+            kind='loan repayment'
+            description={`${data.profile.currency} ${data.education.loanRepayment}`}
+          />
         </div>
       </div>
       <div className='dividerContainer'>
@@ -53,14 +61,9 @@ export const GeneralInformation = () => {
       <div className='socials text-lg'>
         <h2 className='title text-2xl'>Socials</h2>
         <div className='details'>
-          <Information kind='level of education' description='B.Sc' />
-          <Information kind='Employment Status' description='Employed' />
-          <Information kind='sector of employment' description='FinTech' />
-          <Information kind='office email' description='' />
-          <Information kind='Duration of employment' description='2 years' />
-          <Information kind='office email' description='grace@lendsqr.com' />
-          <Information kind='Monthly income' description='₦200,000.00- ₦400,000.00' />
-          <Information kind='loan repayment' description='40,000' />
+          <Information kind='Twitter' description={data.socials.twitter} />
+          <Information kind='Facebook' description={data.socials.facebook} />
+          <Information kind='Instagram' description={data.socials.instagram} />
         </div>
       </div>
       <div className='dividerContainer'>
@@ -70,14 +73,13 @@ export const GeneralInformation = () => {
       <div className='guarantors text-lg'>
         <h2 className='title text-2xl'>Guarantors</h2>
         <div className='details'>
-          <Information kind='level of education' description='B.Sc' />
-          <Information kind='Employment Status' description='Employed' />
-          <Information kind='sector of employment' description='FinTech' />
-          <Information kind='office email' description='' />
-          <Information kind='Duration of employment' description='2 years' />
-          <Information kind='office email' description='grace@lendsqr.com' />
-          <Information kind='Monthly income' description='₦200,000.00- ₦400,000.00' />
-          <Information kind='loan repayment' description='40,000' />
+          <Information
+            kind='Full Name'
+            description={`${data.guarantor.lastName} ${data.guarantor.firstName}`}
+          />
+          <Information kind='Phone Number' description={data.guarantor.phoneNumber} />
+          <Information kind='Email' description={data.guarantor.address} />
+          <Information kind='Gender' description={data.guarantor.gender} />
         </div>
       </div>
     </div>

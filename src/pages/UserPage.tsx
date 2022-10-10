@@ -1,8 +1,13 @@
 import { GeneralInformation, UserProfile } from '../components/user';
 import leftArrowLogo from '../assets/icons/arrow-left.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useFetchOneUserQuery } from '../app/services/users';
 
 const UserPage = () => {
+  const { pathname } = useLocation();
+  const userId = pathname.replace('/users/', '');
+  const { data } = useFetchOneUserQuery(userId);
+
   return (
     <div className='page user'>
       <div className='controller'>
@@ -25,19 +30,26 @@ const UserPage = () => {
         </div>
       </div>
 
-      <UserProfile
-        accountNumber={9912345678}
-        balance='₦ 200,000.00'
-        bankName='Providus Bank'
-        fullname='Grace Effiom'
-        stars={1}
-        tier='User tier'
-        userId='LSQFf587g90'
-        avatar=''
-      />
-
-      {/* General Information tab  */}
-      <GeneralInformation />
+      {data === undefined ? (
+        <h2 className='loading text-2xl'>Looding...</h2>
+      ) : (
+        <>
+          <UserProfile
+            accountNumber={data.accountNumber}
+            balance={data.accountBalance}
+            bankName='Providus Bank'
+            firstname={data.profile.firstName}
+            lastname={data.profile.lastName}
+            stars={1}
+            tier='User tier'
+            username={data.userName}
+            avatar={data.profile.avatar}
+            currency={data.profile.currency}
+          />
+          {/* General Information tab  */}
+          <GeneralInformation {...data} />
+        </>
+      )}
     </div>
   );
 };

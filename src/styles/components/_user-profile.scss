@@ -10,11 +10,14 @@
 
   &--user {
     .imgContainer {
-      padding-left: 0.5em;
+      padding: 0.5em;
+      display: grid;
+      margin-inline: 1em;
       aspect-ratio: 1;
       height: 6.25rem;
       img {
         border-radius: 50%;
+        background-position: center;
       }
     }
 
@@ -34,16 +37,30 @@
       margin-inline: 1em;
     }
 
-    .username {
+    .identity {
       flex-grow: 0.2;
-      > h1 {
-        font-weight: 700;
-        color: darken($text-secondary, 20%);
+      > h1,
+      h2 {
+        font-weight: 500;
+        font-size: 22px;
+      }
+
+      > h2 {
+        font-size: 18px;
       }
     }
 
     .account-info {
       flex-grow: 0.2;
+      > h2 {
+        font-weight: 500;
+        font-size: 22px;
+      }
+    }
+
+    .levels > h2 {
+      font-weight: 500;
+      font-size: 22px;
     }
 
     p {
@@ -56,6 +73,7 @@
   }
 
   &--nav {
+    margin-top: 2em;
     .nav-list {
       list-style-type: none;
       justify-content: space-evenly; // it is a flex item. Check line 7 above
@@ -110,10 +128,11 @@
   .details {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 1em;
+    gap: 0.5em;
 
     .info {
       padding: 0.5em;
+      min-width: max-content;
 
       .kind {
         font-size: 400;
@@ -123,7 +142,7 @@
       }
 
       .description {
-        font-size: 700;
+        font-size: 500;
         text-align: center;
       }
     }
